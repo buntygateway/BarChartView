@@ -1,0 +1,6 @@
+framework module Pods_BarChartView {
+  umbrella header "Pods-BarChartView-umbrella.h"
+
+  export *
+  module * { export * }
+}
