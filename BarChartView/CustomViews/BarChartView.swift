@@ -80,10 +80,10 @@ class BarChartView: UIView {
         let txLine = tx + yLabelWidth + Double(gapBetweenYLabelAndLines);
         
         let tempHeight = Double(self.frame.size.height)
-        let vH = (tempHeight-topGap) - xLabelHeight; //frame.size.height -= topGap;
+        let vH = (tempHeight-topGap) - xLabelHeight;
         let tyGap = vH / numberOfParts;
 
-        var tyLine = vH + topGap; // frame.origin.y = topGap;
+        var tyLine = vH + topGap;
         var ty = tyLine - (yLabelHeight*0.5);
 
         // line width
@@ -118,7 +118,6 @@ class BarChartView: UIView {
             
             
             ty -= tyGap;
-            //tyLine -= (yLabelHeight + yLabelGap);
             tyLine -= tyGap;
             value += scale;
         }
@@ -139,9 +138,6 @@ class BarChartView: UIView {
             maxValueData = 1
         }
         var ratio = Double(vH/maxValueData);
-        //NSLog(@"maxValueData = %.2f vH = %.2f ratio = %f", _maxValueData, vH, ratio);
-        //NSLog(@"height = %f", self.frame.size.height);
-        
         if ratio == 0 {
             ratio = 1
         }
@@ -169,7 +165,6 @@ class BarChartView: UIView {
             
             // Container of 3 vertical bars
             let vBar = UIView(frame: CGRect(x: tx, y: ty, width: barWidth, height: maxValueData * ratio))
-            //vBar.backgroundColor = UIColor.green
             vBar.clipsToBounds = true;
             vBars.addSubview(vBar)
             self.arrBars.append(vBar)
@@ -187,7 +182,6 @@ class BarChartView: UIView {
             // Add the lables on X axis
             let lblTitle = UILabel(frame: CGRect(x: tx+halfGap, y: ty, width: xLabelWidth, height: xLabelHeight))
             lblTitle.font = xLabelFont
-            //lblTitle.backgroundColor = UIColor.green
             lblTitle.text = dct["label"] as? String ?? ""
             lblTitle.textAlignment = .center;
             lblTitle.textColor = xLabelColor
@@ -211,7 +205,7 @@ class BarChartView: UIView {
     }
     
     // Start showing the vertical bars for given data
-    func show(arrData: [[String:Any]]) {
+    public func show(arrData: [[String:Any]]) {
         
         self.cleanUp()
         self.arrData = arrData
@@ -223,11 +217,9 @@ class BarChartView: UIView {
         frame.origin.y = CGFloat(topGap)
         frame.size.height -= CGFloat(topGap)
         frame.size.width -= frame.origin.x + 10
-        //frame.size.height -= xLabelHeight
             
         let vBars = UIScrollView(frame: frame)
         vBars.backgroundColor  = gridBGColor
-        //vBars.backgroundColor = UIColor.red
         vBars.clipsToBounds = true
         self.addSubview(vBars)
             
@@ -250,20 +242,6 @@ class BarChartView: UIView {
                 
             }
         }
-    }
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupView()
-    }
-  
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupView()
-    }
-  
-    private func setupView() {
-        
     }
 }
 
