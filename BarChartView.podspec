@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "12.0"
   spec.swift_version = "4.2"
   spec.name         = "BarChartView"
-  spec.version      = "0.1.0"
+  spec.version      = "0.1.2"
   spec.summary      = "A horizontally scrollable and customizable bar chart view."
   spec.requires_arc = true
 

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BarChartView: UIView {
+public class BarChartView: UIView {
     
     // bar colors
     public var bottomColor = UIColor.init(red: 255/255.0, green: 162/255.0, blue: 23/255.0, alpha: 1)
