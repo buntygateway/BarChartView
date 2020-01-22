@@ -12,38 +12,37 @@ import UIKit
 class BarChartView: UIView {
     
     // bar colors
-    var bottomColor = UIColor.init(red: 255/255.0, green: 162/255.0, blue: 23/255.0, alpha: 1)
-    var topColor = UIColor.init(red: 0/255.0, green: 153/255.0, blue: 255/255.0, alpha: 1)
-    var gridBGColor = UIColor(white: 240/255.0, alpha: 0.3)
+    public var bottomColor = UIColor.init(red: 255/255.0, green: 162/255.0, blue: 23/255.0, alpha: 1)
+    public var topColor = UIColor.init(red: 0/255.0, green: 153/255.0, blue: 255/255.0, alpha: 1)
+    public var gridBGColor = UIColor(white: 240/255.0, alpha: 0.3)
     
     // bar
-    var topGap = 15.0
-    var barWidth = 25.0
-    var barGap = 14.0
+    public var topGap = 15.0
+    public var barWidth = 25.0
+    public var barGap = 14.0
     
     // grid lines
-    var showGridLines = true
-    var gridLineColor = UIColor.lightGray
+    public var showGridLines = true
+    public var gridLineColor = UIColor.lightGray
     
     // x label
-    var xLabelHeight = 30.0
-    var xLabelWidth = 28.0
-    var xLabelFont = UIFont(name: "Helvetica", size: 9)
-    var xLabelColor = UIColor.lightGray
+    public var xLabelHeight = 30.0
+    public var xLabelWidth = 28.0
+    public var xLabelFont = UIFont(name: "Helvetica", size: 9)
+    public var xLabelColor = UIColor.lightGray
     
     // y label
-    var yLabelHeight = 30.0
-    var yLabelWidth = 38.0
-    var yLabelGap = 12.0
-    var yLabelPrefix = "$"
-    var yLabelDecimalPlaces = 2
-    var yLabelFont = UIFont(name: "Helvetica", size: 9)
-    var yLabelColor = UIColor.lightGray
+    public var yLabelHeight = 30.0
+    public var yLabelWidth = 38.0
+    public var yLabelGap = 12.0
+    public var yLabelPrefix = "$"
+    public var yLabelDecimalPlaces = 2
+    public var yLabelFont = UIFont(name: "Helvetica", size: 9)
+    public var yLabelColor = UIColor.lightGray
     
     // animation
-    var animateDuration = 0.5
-    var animateDelay = 0.1
-
+    public var animateDuration = 0.5
+    public var animateDelay = 0.1
     
     // data
     private var arrData: [[String:Any]] = []
