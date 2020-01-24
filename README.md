@@ -16,7 +16,7 @@ You will need the latest developer tools in order to build `BarChartView`. Old X
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate BarChartView into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'BarChartView', '~> 0.1.2'
+pod 'BarChartView', :git => 'https://github.com/buntygateway/BarChartView.git'
 ```
 
 ## Usage
