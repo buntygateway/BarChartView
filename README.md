@@ -21,7 +21,7 @@ pod 'BarChartView', :git => 'https://github.com/buntygateway/BarChartView.git'
 
 ## Usage
 
-The main guideline you need to is to crete the instance of `BarChartView`, add to the viewController's view and call the show method passing the array of dictionaries. The keys must be `v1`, `v2` and `label` as shown below.
+The main guideline you need to follow, is to create the instance of `BarChartView`, add to the viewController's view and call the show method passing the array of dictionaries. The keys must be `v1`, `v2` and `label` as shown below.
 
 ```swift
 let barChartView = BarChartView(frame: frame)
